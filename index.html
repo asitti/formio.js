@@ -1,0 +1,1126 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/formio.full.min.css">
+    <script src="dist/formio.full.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        const components = [
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Text Field Default",
+            "key": "undefinedTextFieldDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": "",
+              "customPrivate": false
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "textfield",
+            "hideLabel": false,
+            "tags": [],
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "number",
+            "label": "Number Default",
+            "key": "undefinedNumberDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "min": "",
+              "max": "",
+              "step": "any",
+              "integer": "",
+              "multiple": "",
+              "custom": ""
+            },
+            "type": "number",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": false,
+            "inputType": "password",
+            "label": "Password Default",
+            "key": "undefinedPasswordDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "protected": true,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "type": "password",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Text Area Default",
+            "key": "undefinedTextAreaDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "rows": 3,
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "wysiwyg": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "minLength": "",
+              "maxLength": "",
+              "pattern": "",
+              "custom": ""
+            },
+            "type": "textarea",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Select Boxes Default",
+            "key": "undefinedSelectBoxesDefault",
+            "values": [
+              {
+                "value": "option1",
+                "label": "Option1"
+              },
+              {
+                "value": "option2",
+                "label": "Option2"
+              }
+            ],
+            "inline": false,
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true
+            },
+            "type": "selectboxes",
+            "hideLabel": false,
+            "conditional": {
+              "show": "",
+              "eq": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Select Default",
+            "key": "undefinedSelectDefault",
+            "placeholder": "",
+            "data": {
+              "values": [
+                {
+                  "value": "option1",
+                  "label": "Option1",
+                },
+                {
+                  "value": "option2",
+                  "label": "Option2",
+                }
+              ],
+              "json": "",
+              "url": "",
+              "resource": "",
+              "custom": ""
+            },
+            "dataSrc": "values",
+            "valueProperty": "",
+            "defaultValue": "",
+            "refreshOn": "",
+            "filter": "",
+            "authenticate": false,
+            "template": "<span>{{ item.label }}</span>",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true
+            },
+            "type": "select",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "radio",
+            "label": "Radio Default",
+            "key": "undefinedRadioDefault",
+            "values": [
+              {
+                "value": "option1",
+                "label": "Option1"
+              },
+              {
+                "value": "option2",
+                "label": "Option2"
+              }
+            ],
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "custom": "",
+              "customPrivate": false
+            },
+            "type": "radio",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "email",
+            "label": "Email Default",
+            "key": "undefinedEmailDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "kickbox": {
+              "enabled": false
+            },
+            "type": "email",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "tel",
+            "inputMask": "(999) 999-9999",
+            "label": "Phone Number Default",
+            "key": "undefinedPhoneNumberDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "multiple": false,
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "defaultValue": "",
+            "clearOnHide": true,
+            "validate": {
+              "required": true
+            },
+            "type": "phoneNumber",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Address Default",
+            "key": "undefinedAddressDefault",
+            "placeholder": "",
+            "multiple": false,
+            "protected": false,
+            "clearOnHide": true,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "map": {
+              "region": "",
+              "key": ""
+            },
+            "validate": {
+              "required": true
+            },
+            "type": "address",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Date Time Default",
+            "key": "undefinedDateTimeDefault",
+            "placeholder": "",
+            "format": "yyyy-MM-dd hh:mm a",
+            "enableDate": true,
+            "enableTime": true,
+            "defaultDate": "",
+            "datepickerMode": "day",
+            "datePicker": {
+              "showWeeks": true,
+              "startingDay": 0,
+              "initDate": "",
+              "minMode": "day",
+              "maxMode": "year",
+              "yearRows": 4,
+              "yearColumns": 5,
+              "datepickerMode": "day"
+            },
+            "timePicker": {
+              "hourStep": 1,
+              "minuteStep": 1,
+              "showMeridian": true,
+              "readonlyInput": false,
+              "mousewheel": true,
+              "arrowkeys": true
+            },
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "custom": ""
+            },
+            "type": "datetime",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Day Default",
+            "key": "undefinedDayDefault",
+            "fields": {
+              "day": {
+                "type": "number",
+                "placeholder": "",
+                "required": true
+              },
+              "month": {
+                "type": "select",
+                "placeholder": "",
+                "required": true
+              },
+              "year": {
+                "type": "number",
+                "placeholder": "",
+                "required": true
+              }
+            },
+            "dayFirst": false,
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "custom": ""
+            },
+            "type": "day",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "time",
+            "format": "HH:mm",
+            "label": "Time Default",
+            "key": "undefinedTimeDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "defaultValue": "",
+            "protected": false,
+            "unique": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "type": "time",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "inputType": "text",
+            "inputMask": "",
+            "label": "Currency Default",
+            "key": "undefinedCurrencyDefault",
+            "placeholder": "",
+            "prefix": "",
+            "suffix": "",
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "multiple": "",
+              "custom": ""
+            },
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "type": "currency",
+            "hideLabel": false,
+            "tags": [],
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Resource Default",
+            "key": "undefinedResourceDefault",
+            "placeholder": "",
+            "resource": "",
+            "project": "",
+            "defaultValue": "",
+            "template": "<span>{{ item.data }}</span>",
+            "selectFields": "",
+            "searchFields": "",
+            "multiple": false,
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true
+            },
+            "defaultPermission": "",
+            "type": "resource",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "File Default",
+            "key": "undefinedFileDefault",
+            "image": false,
+            "imageSize": "200",
+            "placeholder": "",
+            "multiple": false,
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "type": "file",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            },
+            "validate": {
+              "required": true
+            }
+          },
+          {
+            "input": true,
+            "tree": true,
+            "components": [
+              {
+                "input": true,
+                "tableView": true,
+                "inputType": "text",
+                "inputMask": "",
+                "label": "Text Field Default",
+                "key": "undefined1TextFieldDefault",
+                "placeholder": "",
+                "prefix": "",
+                "suffix": "",
+                "multiple": false,
+                "defaultValue": "",
+                "protected": false,
+                "unique": false,
+                "persistent": true,
+                "hidden": false,
+                "clearOnHide": true,
+                "validate": {
+                  "required": true,
+                  "minLength": "",
+                  "maxLength": "",
+                  "pattern": "",
+                  "custom": "",
+                  "customPrivate": false
+                },
+                "conditional": {
+                  "show": "",
+                  "when": null,
+                  "eq": ""
+                },
+                "type": "textfield",
+                "hideLabel": false,
+                "tags": [],
+                "properties": {
+                  "": ""
+                }
+              }
+            ],
+            "tableView": true,
+            "label": "Container Default",
+            "key": "undefinedContainerDefault",
+            "protected": false,
+            "persistent": true,
+            "clearOnHide": true,
+            "type": "container",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            },
+            "isNew": false
+          },
+          {
+            "input": true,
+            "tableView": true,
+            "label": "Survey Default",
+            "key": "undefinedSurveyDefault",
+            "questions": [
+              {
+                "value": "question1",
+                "label": "Question1",
+              },
+              {
+                "value": "question2",
+                "label": "Question2",
+              }
+            ],
+            "values": [
+              {
+                "value": "option1",
+                "label": "Option1"
+              },
+              {
+                "value": "option2",
+                "label": "Option2"
+              }
+            ],
+            "defaultValue": "",
+            "protected": false,
+            "persistent": true,
+            "hidden": false,
+            "clearOnHide": true,
+            "validate": {
+              "required": true,
+              "custom": "",
+              "customPrivate": false
+            },
+            "type": "survey",
+            "hideLabel": false,
+            "tags": [],
+            "conditional": {
+              "show": "",
+              "when": null,
+              "eq": ""
+            },
+            "properties": {
+              "": ""
+            }
+          }
+        ];
+
+        const checkbox = {
+          input: true,
+          inputType: "checkbox",
+          tableView: true,
+          label: "Check Box Default",
+          datagridLabel: true,
+          key: "undefinedCheckBoxDefault",
+          defaultValue: false,
+          protected: false,
+          persistent: true,
+          hidden: false,
+          name: "",
+          value: "",
+          clearOnHide: true,
+          validate: {
+            required: false
+          },
+          type: "checkbox",
+          hideLabel: false,
+          labelPosition: "top",
+          tags: [
+          ],
+          conditional: {
+            show: "",
+            when: null,
+            eq: ""
+          },
+          properties: {
+            "": ""
+          }
+        };
+
+        function getComponents() {
+          const labelPositions = [
+            'default',
+            'top',
+            'bottom',
+            'left-left',
+            'left-right',
+            'right-left',
+            'right-right'
+          ];
+          const checkboxLabelPositions = [
+            'top',
+            'left',
+            'right',
+            'bottom'
+          ];
+          const optionsLabelPositions = [
+            'top',
+            'left',
+            'right',
+            'bottom'
+          ];
+          const inputsLabelPositions = [
+            'top',
+            'left',
+            'right',
+            'bottom'
+          ];
+          const Name = {
+            'top': 'Top',
+            'bottom': 'Bottom',
+            'left-left': 'LeftLeft',
+            'left-right': 'LeftRight',
+            'right-left': 'RightLeft',
+            'right-right': 'RightRight',
+            'left': 'Left',
+            'right': 'Right'
+          };
+
+          return _.flattenDeep(labelPositions.map((labelPosition) => {
+            if (labelPosition === 'default') {
+              return components;
+            }
+
+            return components.map(_.cloneDeep).map((component) => {
+              if (['radio', 'selectboxes'].includes(component.type)) {
+                return _.flattenDeep(optionsLabelPositions.map((optionsLabelPosition) => {
+                  const copy = _.cloneDeep(component);
+                  copy.labelPosition = labelPosition;
+                  copy.optionsLabelPosition = optionsLabelPosition;
+                  copy.label = component.label.replace('Default', Name[labelPosition] + Name[optionsLabelPosition]);
+                  copy.key = component.key.replace('Default', Name[labelPosition] + Name[optionsLabelPosition]);
+
+                  const inlineCopy = _.cloneDeep(copy);
+                  inlineCopy.inline = true;
+                  inlineCopy.label += 'Inline';
+                  inlineCopy.key += 'Inline';
+                  return [copy, inlineCopy];
+                }));
+              }
+
+              if (component.type === 'day') {
+                return _.flattenDeep(inputsLabelPositions.map((inputsLabelPosition) => {
+                  const copy = _.cloneDeep(component);
+                  copy.labelPosition = labelPosition;
+                  copy.inputsLabelPosition = inputsLabelPosition;
+                  copy.label = component.label.replace('Default', Name[labelPosition] + Name[inputsLabelPosition]);
+                  copy.key = component.key.replace('Default', Name[labelPosition] + Name[inputsLabelPosition]);
+                  return copy;
+                }));
+              }
+
+              if ([
+                'textfield',
+                'number',
+                'textarea',
+                'select',
+                'email',
+                'phonenumber',
+                'address',
+                'time',
+                'currency',
+                'resource',
+                'file'
+              ].includes(component.type)) {
+                const copy = _.cloneDeep(component);
+                copy.labelPosition = labelPosition;
+                copy.label = component.label.replace('Default', Name[labelPosition]);
+                copy.key = component.key.replace('Default', Name[labelPosition]);
+
+                const multipleCopy = _.cloneDeep(copy);
+                multipleCopy.multiple = true;
+                multipleCopy.label += 'Multiple';
+                multipleCopy.key += 'Multiple';
+
+                return [copy, multipleCopy];
+              }
+
+              component.labelPosition = labelPosition;
+              component.label = component.label.replace('Default', Name[labelPosition]);
+              component.key = component.key.replace('Default', Name[labelPosition]);
+              return component;
+            });
+          })).concat(checkboxLabelPositions.map((labelPosition) => {
+            const copy = _.cloneDeep(checkbox);
+            copy.labelPosition = labelPosition;
+            copy.label = copy.label.replace('Default', Name[labelPosition]);
+            copy.key = copy.key.replace('Default', Name[labelPosition]);
+            return copy;
+          }));
+        }
+
+        Formio.createForm(document.getElementById('formio'), 'https://omoyopijkrzjrxk.form.io/viewashtml/submission/5a6b243bb510eb0001a6055a', {
+          readOnly: true,
+          viewAsHtml: true
+        });
+
+        /*Formio.createForm(document.getElementById('formio'), 'https://soiltec.form.io/ticketformv2').then(function(form) {
+
+          // FUNCTION DEFINITIONS AND SETTINGS
+          window.getValueFrom = function( object, path, log ) {
+            if ( typeof object == 'undefined' ) return;
+            var levels = path.split('.');
+            if ( log ) console.log('levels',levels);
+            for ( var level in levels ) {
+              if ( log ) console.log('level = "' + levels[level] + '" and object',object);
+              if ( object[levels[level]] == undefined ) return;
+              object = object[levels[level]];
+            }
+            return object;
+          };
+          window.isBeingEdited = !form.options.readOnly;
+          function isEmpty( obj ) {
+            for ( var key in obj ) {
+              if ( obj.hasOwnProperty(key) ) return false;
+            }
+            return true;
+          }
+          function adjustTextareaFields() {
+            setTimeout( function() {
+              let textareas = document.getElementsByTagName("textarea");
+              for (let i = 0; i < textareas.length; i++) {
+                let textarea = textareas[i];
+                textarea.rows = 1;
+                textarea.rows = Math.ceil((textarea.scrollHeight - 32) / 20) + 1;
+              }
+            }, 500);
+          }
+          var log = false;
+
+          // MAKE CHANGES UPON SUBMISSION
+          form.options.hooks = {
+            beforeSubmit: (submission, next) => {
+
+              if ( log ) console.log('$$$$ beforeSubmit hook running with submission',submission);
+
+              // If we're on the primary ticket form and NOT a nested Stamp form ...
+              // As a precaution to losing data if Soiltec changes a stamp in some odd way, we should set the
+              // nested stamp form to NOT save by reference.  This also makes the form submission behave better
+              // by only doing one submission, even though a submission for the stamp form itself is also somehow saved.
+              // Adding this if statement for ticketNum is just a safeguard in case the nested stamp form IS saved
+              // by reference and attempts to run its own submission validations.
+              if ( submission.data.ticketNum ) {
+
+                // Update lease related fields
+                var leaseName = getValueFrom(submission, 'data.leaseChoices.data.leaseName');
+                if ( leaseName != 'Create New Lease' ) {
+                  submission.data.lease = leaseName;
+                } else {
+                  submission.data.leaseOverride = true;
+                }
+                submission.data.countyOverride = ( getValueFrom(submission, 'data.leaseChoices.data.county') != getValueFrom(submission, 'data.county') ) ? true : false;
+                submission.data.customerOverride = ( getValueFrom(submission, 'data.leaseChoices.data.customerName.data.customerName') != getValueFrom(submission, 'data.customer') ) ? true : false;
+                submission.data.rigOverride = ( getValueFrom(submission, 'data.leaseChoices.data.rig.data.rigName') != getValueFrom(submission, 'data.rig') ) ? true : false;
+
+                // Update work related fields
+                var workRows = getValueFrom(submission, 'data.workRows').length;
+                for ( let i = 0; i < workRows; i++ ) {
+                  let row = 'data.workRows.'+i+'.';
+                  // Set the work field
+                  let workType = getValueFrom(submission, row+'workSelect.data.description') || ' ';
+                  if ( workType != 'Other' || ! getValueFrom(submission, row+'work') ) {
+                    submission.data.workRows[i].work = workType;
+                  }
+                  // Set the equip field
+                  let equipSelect = getValueFrom(submission, row+'equipSelect.data.assetNumber');
+                  if ( equipSelect && getValueFrom(submission, row+'workSelect.data.requiresTruck') ) {
+                    submission.data.workRows[i].equip = equipSelect;
+                  }
+                  // Set the unitTypeRead field
+                  submission.data.workRows[i].unitTypeRead = getValueFrom(submission, row+'unitType');
+                  // Set the Hidden Data Fields
+                  let j = i + 1
+                  submission.data['work_R'+j] = getValueFrom(submission, row+'work');
+                  submission.data['equip_R'+j] = getValueFrom(submission, row+'equip');
+                  submission.data['unitType_R'+j] = getValueFrom(submission, row+'unitType');
+                  submission.data['unitCount_R'+j] = getValueFrom(submission, row+'unitCount');
+                  submission.data['unitPrice_R'+j] = getValueFrom(submission, row+'price');
+                  submission.data['amount_R'+j] = getValueFrom(submission, row+'amount');
+                }
+              }
+
+              // Hack the dynamic nested stamp form by saving its values in a hidden field.
+              // Travis called this "elegant" instead of a hack.  The nested form component is
+              // calculated as "value = data.stampData" inside an if statement so that it only
+              // runs in Formio-Viewer.  And it runs just after we reset the stamp over there.
+              // This is a workaround that might not be necessary for long because they are fixing
+              // the core issue on the server side within a week or so of 12-6-17.
+              submission.data.stampData = submission.data.stamp;
+
+              if ( log ) console.log('$$$$ beforeSubmit hook ran with submission',submission);
+
+              // Call next() to complete the submission.  If you pass a parameter to next(), it will be taken
+              // as a validation error you want to throw to the UI for the user PRIOR to the component validations
+              // which only run after a successful next().  It might look like the following:
+              // let submitErrors = [];
+              // submitErrors.push({ message: 'This is an error' });
+              // next(submitErrors);
+              next();
+            }
+          }
+
+          // MAKE CHANGES UPON FIELD VALUES CHANGING
+          form.on('change', function(changed) {
+
+            var changedField = getValueFrom(changed, 'changed.component.key');
+            if ( !isBeingEdited || !changedField ) return;
+            var activeElement = document.activeElement;
+            var active = activeElement.getAttribute('name');
+            var hasFocus = ( active && active.indexOf(changedField) > -1 ) ? true : false;
+            var data = {};
+            var reRender = false;
+            if ( log ) {
+              var temp = hasFocus ? ' HAS FOCUS' : ' DOES NOT HAVE FOCUS';
+              console.log("changedField = " + changedField + temp + ' ... and changed', changed);
+            }
+
+
+            // Update lease fields
+            if ( changedField == 'leaseChoices' ) {
+              var leaseName = getValueFrom(changed, 'changed.value.data.leaseName') || '';
+              if ( leaseName && leaseName != 'Create New Lease' ) {
+                // If a legit lease was chosen from the list, update the customer, county, rig, and email fields
+                data.customer = getValueFrom(changed, 'changed.value.data.customerName.data.customerName') || '';
+                data.county = getValueFrom(changed, 'changed.value.data.county') || '';
+                data.rig = getValueFrom(changed, 'changed.value.data.rig.data.rigName') || '';
+                data.email = getValueFrom(changed, 'changed.value.data.email') || '';
+                // Have to re-render the form to get the fields to change in the UI ... really only after making
+                // another choice following having x'd out.  I don't know how to suppress it otherwise.
+                if ( getValueFrom(changed, 'data.noUpdateLease') ) {
+                  data.reRender = true;
+                  data.noUpdateLease = false;
+                }
+              } else if ( !leaseName ) {
+                // If the lease was x'd out, assume they mean the same as if they had chosen "Create New Lease"
+                data.leaseChoices = data.leaseChoices || {};
+                data.leaseChoices.data = data.leaseChoices.data || {};
+                data.leaseChoices.data.leaseName = 'Create New Lease';
+                // Have to re-render the form to get the fields to change in the UI
+                data.reRender = true;
+                data.noUpdateLease = true;
+              }
+            }
+
+            // Auto-expand textareas as the user types
+            if ( changedField == 'work' && hasFocus ) {
+              activeElement.rows = 1;
+              let newRows = Math.ceil((activeElement.scrollHeight - 32) / 20) + 2;
+              activeElement.rows = newRows;
+            }
+            if ( changedField == 'amountViewer' ) {
+              adjustTextareaFields();
+            }
+
+            // Update unit type when a piece of equipment is chosen
+            if ( changedField == 'equipSelect' ) {
+              let row = -getValueFrom(changed, 'changed.component.row');
+              data.workRows = data.workRows || [];
+              data.workRows[row] = data.workRows[row] || {};
+              data.workRows[row].unitType = getValueFrom(changed, 'data.workRows.'+row+'.workSelect.data.unit.data.unit');
+            }
+
+            // Calculate $Amount fields in rows
+            if (  changedField == 'unitCount' && hasFocus ||
+              changedField == 'price' && hasFocus ||
+              changedField == 'amount' && hasFocus
+            ) {
+              // Because we don't want to make updates based upon these fields until we leave these fields,
+              // see the window.updateFieldsOnFocusOut function defined on this page.
+              let row = -getValueFrom(changed, 'changed.component.row');
+              activeElement.setAttribute('onfocusout', 'updateFieldsOnFocusOut("' + changedField + '", "' + row + '")');
+            } else if ( changedField == 'amount' ) data.noUpdateAmount = false;
+
+            // Barrel Count Calculations
+            if (changedField == 'workSelect' ||
+              changedField == 'equipSelect' ||
+              changedField == 'unitType' ||
+              changedField == 'unitCount'
+            ) {
+              let workRows = getValueFrom(changed, 'data.workRows').length;
+              for ( let i = 0; i < workRows; i++ ) {
+                var bType = getValueFrom(changed, 'data.workRows.'+i+'.workSelect.data.bType'),
+                quant = getValueFrom(changed, 'data.workRows.'+i+'.unitCount'),
+                unitsPer = getValueFrom(changed, 'data.workRows.'+i+'.equipSelect.data.maxUnits'),
+                unitType = getValueFrom(changed, 'data.workRows.'+i+'.unitType');
+                if ( bType && unitType && quant && unitsPer ) {
+                  var count = (unitType == 'Loads') ? quant * unitsPer : (unitType == 'Barrels') ? quant : 0;
+                  data[bType] = data[bType] ? data[bType] + count : count;
+                }
+              }
+            }
+
+
+            // Stamp Changes
+            if ( changedField == 'stampSelector' ) {
+              // Build the src URL for the chosen stamp
+              var newStamp = form.formio.projectUrl + '/' + getValueFrom(changed, 'changed.value.data.stampForm.path');
+              // Get the nested form component (stamp)
+              var stamp = form.getComponent('stamp');
+              // Reset the stamp in the user interface by changing it's src property
+              stamp.src = newStamp;
+              // Reset the stamp in the raw form JSON ... need this for when a re-render occurs
+              stamp.component.src = newStamp;
+              // Do the same steps for the stamp's form property ... This isn't necessary to make our 'elegant hack'
+              // work, but may well be after Travis fixes the server side issue with dynamically chosen sub-forms.
+              newStampID = getValueFrom(changed, 'changed.value.data.stampForm._id');
+              stamp.form = newStampID;
+              stamp.component.form = newStampID;
+              if ( true ) console.log('stamp was changed to ' + newStamp);
+            }
+
+
+            // If the reRender field has been set true during a form.submission, it will show as the changedField
+            // since it is the last field on the form.  We use this to trigger a re-rendering of the form and then
+            // set it back to false.
+            if ( changedField == 'reRender' && getValueFrom(changed, 'changed.value') ) {
+              if ( log ) console.log('reRender was true, so set form to re-render');
+              data.reRender = false;
+              reRender = true;
+            }
+            // Apply changes
+            if ( !isEmpty(data) ) {
+              if ( log ) console.log('About to do a form.submission with data', data);
+              form.submission = { data: data };
+            }
+            // Re-render if necessary
+            if ( reRender ) form.render();
+
+          });
+
+          // UPDATES BASED UPON FOCUSOUT EVENT FOR QUANT, PRICE, AND AMOUNT
+          window.updateFieldsOnFocusOut = function(changedField, row) {
+            if ( log ) console.log('----- Running updateFieldsOnFocusOut function with changedField = ' + changedField + ' and row = ' + row);
+            var data = form.data,
+            quant = getValueFrom(data, 'workRows.'+row+'.unitCount'),
+            price = getValueFrom(data, 'workRows.'+row+'.price'),
+            noUpdateAmount = getValueFrom(data, 'noUpdateAmount'),
+            dataChanges = {};
+            if ( noUpdateAmount ) {
+              dataChanges.noUpdateAmount = false;
+            }
+            // Calculate amount if we just changed either quant or price and have both
+            if ( ( changedField == 'unitCount' || changedField == 'price' ) && quant && price ) {
+              dataChanges.workRows = dataChanges.workRows || {};
+              dataChanges.workRows[row] = dataChanges.workRows[row] || {};
+              dataChanges.workRows[row].amount = quant * price;
+              dataChanges.noUpdateAmount = true;
+            }
+            // Remove price if amount has been changed directly
+            if ( changedField == 'amount' && price && !noUpdateAmount) {
+              dataChanges.workRows = dataChanges.workRows || {};
+              dataChanges.workRows[row] = dataChanges.workRows[row] || {};
+              dataChanges.workRows[row].price = '';
+            }
+            if ( !isEmpty(dataChanges) ) {
+              if ( log ) console.log('----- About to do a form.submission with dataChanges', dataChanges);
+              form.submission = { data: dataChanges };
+            }
+            document.getElementsByName('data[workRows][' + row + '][' + changedField + ']')[0].removeAttribute('onfocusout');
+          };
+
+          // Final updates after the Submit Button is clicked
+          form.on('submitButton', function() {
+            if ( log ) console.log('$$$$ Submit Button was clicked and form = ', form);
+          });
+
+          // Register for the submit event to get the completed submission.
+          form.on('submit', function(submission) {
+            if ( log ) console.log('@@@@ Submission was MADE', submission);
+          });
+
+          form.on('submitDone', function(submissionSaved) {
+            if ( log ) console.log('@@@@ Submission was SAVED', submissionSaved);
+            var viewerTicketUrl = viewer + submissionSaved._id + '?header=0&token=' + localStorage.formioToken;
+            if ( typeof appursite != 'undefined' && appursite.is_app ) {
+              openUrlInSVC(viewerTicketUrl, true);
+            } else {
+              window.open(viewerTicketUrl);
+            }
+            form.options.readOnly = true;
+            window.isBeingEdited = !form.options.readOnly;
+            form.render();
+          });
+        });*/
+      };
+    </script>
+  </head>
+  <body>
+    <div id="formio"></div>
+  </body>
+</html>
